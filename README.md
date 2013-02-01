@@ -11,10 +11,10 @@ import boxelder._
 println(Tree()(Branch("foo", Branch("bar", Branch("baz")), Branch("boom"))))
 ```
 
-foo
-├─┬ bar
-│ └── baz
-└── boom
+    foo
+    ├─┬ bar
+    │ └── baz
+    └── boom
 
 You can also render in ascii where unicode is not supported by calling the `ascii` method on a tree.
 
@@ -24,9 +24,9 @@ println(Tree().ascii(Branch("foo", Branch("bar", Branch("baz")), Branch("boom"))
 
 This will render
 
-foo
-+-- bar
-| `-- baz
-`-- boom
+    foo
+    +-- bar
+    | `-- baz
+    `-- boom
 
 Doug Tangren (softprops) 2013

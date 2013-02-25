@@ -1,3 +1,3 @@
-package object linden {
+package object treeline {
   val NL = "\n"
 }

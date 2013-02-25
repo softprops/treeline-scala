@@ -1,4 +1,4 @@
-package linden
+package treeline
 
 import org.scalacheck._
 

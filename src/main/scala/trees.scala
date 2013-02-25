@@ -1,4 +1,4 @@
-package linden
+package treeline
 
 case class Branch(name: String, children: Branch*)
 

@@ -1,10 +1,10 @@
-# linden
+# treeline
 
 A unicode tree renderer.
 
 ## usage
 
-Linden exposes two objects `Trees` and `Branches`. A `Tree` is made of one or more `Branches` and a `Branch` is just a name to display and an optional list of `Branches`.
+Treeline exposes two objects `Trees` and `Branches`. A `Tree` is made of one or more `Branches` and a `Branch` is just a name to display and an optional list of `Branches`.
 
 ```scala
 import boxelder._

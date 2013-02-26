@@ -1,6 +1,12 @@
 # treeline
 
 A unicode tree renderer.
+    
+    ├─┬ ↑
+    │ └── ⬆
+    ├─┬ ⬆
+    │ └── ↑
+    └── ↑
 
 ## usage
 

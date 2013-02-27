@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>treeline</title>
+    <style>
+      body {
+        font-family: helvetica neuve, helvetica, arial, sans serif;
+        font-size: 48px;
+        background:url('http://farm8.staticflickr.com/7076/7356253402_8b8883b6b2_h.jpg');
+        color:#fff;
+        text-shadow:.1em .1em .7em #000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TREE LINE</h1>
+    <pre>├─┬ ↑
+│ └── ⬆
+├─┬ ⬆
+│ └── ↑
+└── ↑</pre>
+     <p>install it</p>
+     <code>ls-install treeline</code>
+     <p>use it</p>
+     <pre><code>import treeline._
+import java.io.File
+def branch(f: File) =
+  Branch(
+    f.getName,
+    if (f.isDirectory) f.listFiles.map(branch)
+    else Nil)
+println(Tree()(branch(new File("")))
+</code></pre>
+    <div id="foot">photo by <a href="http://www.flickr.com/photos/dangerous-dan/7356253402/sizes/l/in/contacts/">dangerous-dan</a>
+  </body>
+</html>

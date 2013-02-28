@@ -76,9 +76,8 @@ import java.io.File
 def branch(f: File): Branch =
   Branch(
     f.getName,
-    (if (f.isDirectory)
-      f.listFiles.map(branch).toList
-     else Nil):_*)
+    Option(f.listFiles).getOrElse(Array())
+      .map(branch):_*)
 println(Tree()(branch(new File(".")))
 </code></pre>
     </div>

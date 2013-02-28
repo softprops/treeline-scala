@@ -2,7 +2,7 @@ organization := "me.lessis"
 
 name := "treeline"
 
-version := "0.1.0-SNAPSHOT"
+version := "0.1.0"
 
 description := "Renders nested branches of trees in unicode and ascii"
 
@@ -34,3 +34,6 @@ pomExtra := (
     </developer>
   </developers>)
 
+seq(lsSettings:_*)
+
+LsKeys.tags in LsKeys.lsync := Seq("tree", "unicode")

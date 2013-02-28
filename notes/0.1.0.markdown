@@ -25,7 +25,8 @@ A simple library for rendering nested tree structures in a hierarchical fashion.
      
 ## misc
  
- For more information, see the [readme][readme] or open an [issue][issues].
+ For more information, see the [project page][ghpage], [readme][readme] or open an [issue][issues].
    
+[ghpage]: http://softprops.github.com/treeline/
 [readme]: https://github.com/softprops/treeline#readme
 [issues]: https://github.com/softprops/treeline/issues/new

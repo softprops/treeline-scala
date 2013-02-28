@@ -1,0 +1,37 @@
+## initial release
+
+A simple library for rendering nested tree structures in a hierarchical fashion.
+
+    ├─┬ ↑
+    │ └── ⬆
+    ├─┬ ⬆
+    │ └── ↑
+    └── ↑
+
+## Install with
+
+    import treeline.{ Tree, Branch }
+    val branches = Branch("foo", Branch("bar", Branch("baz")), Branch("boom"))
+    
+    // print a unicode tree
+    println(Tree()(branches))
+    
+    foo
+    ├─┬ bar
+    │ └── baz
+    └── boom
+    
+    // print an ascii tree
+    println(Tree().ascii(branches))
+    
+    foo
+    +-- bar
+    | `-- baz
+    `-- boom
+ 
+## misc
+ 
+ For more information, see the [readme][readme] or open an [issue][issues].
+   
+[readme]: https://github.com/softprops/treeline#readme
+[issues]: https://github.com/softprops/treeline/issues/new

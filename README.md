@@ -8,6 +8,16 @@ A unicode tree renderer.
     │ └── ↑
     └── ↑
 
+## install
+
+### using [ls](http://ls.implicit.ly/#publishing)
+
+    ls-install treeline
+
+### using [sbt](http://www.scala-sbt.org/)
+
+    libraryDepdendencies += "me.lessis" %% "treeline" % "0.1.0"
+
 ## usage
 
 Treeline exposes two objects `Trees` and `Branches`. A `Tree` is made of one or more `Branches` and a `Branch` is just a name to display and an optional list of `Branches`.

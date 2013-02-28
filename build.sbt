@@ -17,6 +17,9 @@ licenses <<= version(v =>
       Seq("MIT" ->
           url("https://github.com/softprops/treeline/blob/%s/LICENSE" format v)))
 
+crossScalaVersions :=
+      Seq("2.8.1", "2.8.2", "2.9.0-1", "2.9.1", "2.9.1-1", "2.9.2", "2.10.0")
+
 publishArtifact in Test := false
 
 publishMavenStyle := true

@@ -78,7 +78,7 @@ def branch(f: File): Branch =
     f.getName,
     Option(f.listFiles).getOrElse(Array())
       .map(branch):_*)
-println(Tree()(branch(new File(".")))
+println(Tree()(branch(new File("."))))
 </code></pre>
     </div>
     <div id="foot">photo by <a href="http://www.flickr.com/photos/dangerous-dan/7356253402/sizes/l/in/contacts/">dangerous-dan</a>

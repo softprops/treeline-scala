@@ -6,31 +6,82 @@
       body {
         font-family: helvetica neuve, helvetica, arial, sans serif;
         font-size: 48px;
-        background:url('http://farm8.staticflickr.com/7076/7356253402_8b8883b6b2_h.jpg');
+        background:url('http://farm8.staticflickr.com/7076/7356253402_8b8883b6b2_h.jpg') no-repeat;
+        background-size:100% auto;
+        /*http://www.flickr.com/photos/29910712@N05/5152115793/sizes/l/in/photostream/*/
+        /*background:url('http://farm2.staticflickr.com/1197/5152115793_933c090456_b.jpg');*/
         color:#fff;
         text-shadow:.1em .1em .7em #000;
+      }
+      pre {
+        margin-top:0;
+        padding-top:0;
+      }
+      .instruct pre {
+        border-radius:7px;
+        background:rgba(0,0,0,.25);
+        font-family:Consolas, "Liberation Mono", Courier, monospace;
+      }
+      a:link, a:visited { color:#fff; }
+      .amp {
+        font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+        font-style: italic;
+        font-weight: normal;
+      }
+      #foot { font-size: 40%;}
+      #describe pre, #describe div {
+        float:left;
+      }
+      #describe div {
+        margin-left:100px;
+      }
+      .instruct {
+        clear:both;
+      }
+      h2 {
+        font-size:90%;
+      }
+      .instruct h2:before {
+        content:"➡ ";
       }
     </style>
   </head>
   <body>
     <h1>TREE LINE</h1>
+    <div id="describe">
     <pre>├─┬ ↑
 │ └── ⬆
 ├─┬ ⬆
 │ └── ↑
 └── ↑</pre>
-     <p>install it</p>
-     <code>ls-install treeline</code>
-     <p>use it</p>
-     <pre><code>import treeline._
+     <div>a scala library<br/>for rendering<br/> unicode <span class="amp">&</span> ascii<br/>trees of _.</div>
+    </div>
+    <div class="instruct" id="install">
+     <h2>install it</h2>
+     <div id="ls">
+       <p>With <a href="#">ls</a></p>
+       <pre><code>ls-install treeline</code></pre>
+     </div>
+     <div id="sbt">
+       <p>With <a href="#">sbt</a></p>
+       <pre><code>libraryDependencies += "me.lessis" %%
+                       "treeline"  %
+                       "0.1.0"</code></pre>
+     </div>
+    </div>
+    <div class="instruct" id="use">
+     <h2>use it</h2>
+     <pre><code>import treeline.{ Tree, Branch }
 import java.io.File
-def branch(f: File) =
+def branch(f: File): Branch =
   Branch(
     f.getName,
-    if (f.isDirectory) f.listFiles.map(branch)
-    else Nil)
-println(Tree()(branch(new File("")))
+    (if (f.isDirectory)
+      f.listFiles.map(branch).toList
+     else Nil):_*)
+println(Tree()(branch(new File(".")))
 </code></pre>
+    </div>
     <div id="foot">photo by <a href="http://www.flickr.com/photos/dangerous-dan/7356253402/sizes/l/in/contacts/">dangerous-dan</a>
   </body>
 </html>

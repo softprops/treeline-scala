@@ -10,7 +10,7 @@ A unicode tree renderer.
 
 ## install
 
-### using [ls](http://ls.implicit.ly/#publishing)
+### using [ls](http://ls.implicit.ly/#installing)
 
     ls-install treeline
 
@@ -23,7 +23,7 @@ A unicode tree renderer.
 Treeline exposes two objects `Trees` and `Branches`. A `Tree` is made of one or more `Branches` and a `Branch` is just a name to display and an optional list of `Branches`.
 
 ```scala
-import boxelder._
+import treeline._
 println(Tree()(Branch("foo", Branch("bar", Branch("baz")), Branch("boom"))))
 ```
 

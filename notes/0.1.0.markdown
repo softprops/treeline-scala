@@ -2,13 +2,17 @@
 
 A simple library for rendering nested tree structures in a hierarchical fashion.
 
-    ├─┬ ↑
-    │ └── ⬆
-    ├─┬ ⬆
-    │ └── ↑
-    └── ↑
-
 ## Install with
+
+[ls](http://ls.implicit.ly/#installing) ( the sbt plugin )
+ 
+    ls-install treeline
+
+[sbt](http://www.scala-sbt.org/) ( by hand )
+
+    libraryDependencies += "me.lessis" %% "treeline" % "0.1.0"
+
+## Use it
 
     import treeline.{ Tree, Branch }
     val branches = Branch("foo", Branch("bar", Branch("baz")), Branch("boom"))
@@ -16,19 +20,9 @@ A simple library for rendering nested tree structures in a hierarchical fashion.
     // print a unicode tree
     println(Tree()(branches))
     
-    foo
-    ├─┬ bar
-    │ └── baz
-    └── boom
-    
     // print an ascii tree
     println(Tree().ascii(branches))
-    
-    foo
-    +-- bar
-    | `-- baz
-    `-- boom
- 
+     
 ## misc
  
  For more information, see the [readme][readme] or open an [issue][issues].

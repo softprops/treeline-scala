@@ -7,7 +7,7 @@ version := "0.1.0"
 description := "Renders nested branches of trees in unicode and ascii"
 
 homepage :=
-  Some(url("https://github.com/softprops/treeline/"))
+  Some(url("https://github.com/softprops/%s/".format(name.value)))
 
 scalacOptions += Opts.compile.deprecation
 
@@ -18,7 +18,7 @@ licenses <<= version(v =>
           url("https://github.com/softprops/treeline/blob/%s/LICENSE" format v)))
 
 crossScalaVersions :=
-      Seq("2.8.1", "2.8.2", "2.9.0-1", "2.9.1", "2.9.1-1", "2.9.2", "2.10.0")
+      Seq("2.9.3", "2.10.4", "2.11.0")
 
 publishArtifact in Test := false
 
@@ -40,3 +40,8 @@ pomExtra := (
 seq(lsSettings:_*)
 
 LsKeys.tags in LsKeys.lsync := Seq("tree", "unicode")
+
+credentials += Credentials("Sonatype Nexus Repository Manager",
+                           "oss.sonatype.org",
+                           "your-sonatype-username",
+                           "your-sonatype-password")
